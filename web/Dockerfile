@@ -16,5 +16,4 @@ RUN addgroup --system appgroup && \
 USER appuser
 
 EXPOSE 5000
-CMD ["python3", "-m", "gunicorn", "--bind", "0.0.0.0:5000",
-     "--workers", "1", "--timeout", "60", "app:app"]
+CMD ["python3", "-m", "gunicorn", "--bind", "0.0.0.0:5000", "--workers", "1", "--timeout", "60", "app:app"]
